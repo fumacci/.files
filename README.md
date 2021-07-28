@@ -1,7 +1,12 @@
 <div align="center">
 
 # smok's .files
+
 screensshotaqui
+
+![Meu Twitter](https://img.shields.io/twitter/follow/smok8?color=%2358839b&label=Siga-me%20no%20Twitter&style=for-the-badge)
+![Licensa BSD-3](https://img.shields.io/github/license/fumacci/.files?label=LICEN%C3%87A&logo=BSD-3&style=for-the-badge)
+
 -------------------------------------------------------------------------------
 
 </div>
