@@ -2,8 +2,10 @@
 
 Cheque o arquivo `config.def.h` e modifique as variáveis que você precisar (como a fonte, tamanho da fonte, colorscheme, etc). Compile e instale com:
 
-> make
-> sudo make install
+``` sh
+make
+sudo make install
+```
 
 Para limpar o diretório após o último passo, exclua o arquivo `config.h` e rode `make clean`. 
 

@@ -2,7 +2,9 @@
 
 # smok's .files
 
-screensshotaqui
+![Screenshot 1](https://raw.githubusercontent.com/fumacci/.files/main/img/screen1.png)
+![Screenshot 2](https://raw.githubusercontent.com/fumacci/.files/main/img/screen2.png)
+![Screenshot 3](https://raw.githubusercontent.com/fumacci/.files/main/img/screen3.png)
 
 ![Meu Twitter](https://img.shields.io/twitter/follow/smok8?color=%2358839b&label=Siga-me%20no%20Twitter&style=for-the-badge)
 ![Licensa BSD-3](https://img.shields.io/github/license/fumacci/.files?label=LICEN%C3%87A&logo=BSD-3&style=for-the-badge)
@@ -15,14 +17,17 @@ screensshotaqui
 
 Esse repositório é apenas para fins de backup dos meus arquivos de configuração atuais, pretendo criar um script para automatizar a instalação desses arquivos futuramente para uso próprio. O diretório está estruturado seguindo os padrões UNIX da pasta `/` para melhor organização, encontrando-se assim:
 
->├── etc
->│   ├── bspwm
->│   ├── mpd
->│   ├── mpv
->│   ├── ncmpcpp
->│   └── sxhkd
->├── img
->└── src
+```
+├── etc
+│   ├── bspwm
+│   ├── mpd
+│   ├── mpv
+│   ├── ncmpcpp
+│   └── sxhkd
+├── img
+└── src
+
+```
 
 Onde o diretório `etc/` equivale ao diretório `~/.config` e `src/` onde eu costumo guardar programas cujo arquivo de configuração é um simples header em C (como os programas da `suckless`). O diretório `img` contém meu wallpaper para os interessados.
 
