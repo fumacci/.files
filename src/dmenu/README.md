@@ -1,5 +1,7 @@
 <div align="center">
+
 ![Screenshot do dmenu](https://raw.githubusercontent.com/fumacci/.files/main/src/dmenu/screen1.png)
+
 </div>
 
 Esse é meu fork do `dmenu-5.0` com algums patches simples que improvisam a funcionalidade e a aparência 
