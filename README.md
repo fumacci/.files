@@ -6,7 +6,7 @@
 ![Screenshot 2](https://raw.githubusercontent.com/fumacci/.files/main/img/screen2.png)
 ![Screenshot 3](https://raw.githubusercontent.com/fumacci/.files/main/img/screen3.png)
 
-![Meu Twitter](https://img.shields.io/twitter/follow/smok8?color=%2358839b&label=Siga-me%20no%20Twitter&style=for-the-badge)
+![Meu Twitter](https://img.shields.io/twitter/follow/smok8?label=Me%20Siga%20no%20Twitter%20%3E%20%40smok8&style=for-the-badge)
 ![Licensa BSD-3](https://img.shields.io/github/license/fumacci/.files?label=LICEN%C3%87A&logo=BSD-3&style=for-the-badge)
 
 
