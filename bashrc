@@ -17,12 +17,20 @@ alias bashconf="vim ~/.bashrc && source .bashrc"
 alias i="yay -S"
 alias u="yay -Syu"
 alias r="yay -Rs"
-alias ss="yay -Ss"
+alias s="yay -Ss"
 
 # -- Download or play audio-only videos from YouTube (or another supported site through youtube-dl
 alias musd="youtube-dl -f'bestaudio[ext=m4u]'"
 alias musv="mpv --no-video --loop"
 
+# -- Git commands
+alias gc="git clone"
+alias gp="git push"
+alias gl="git pull"
+alias ga="git add"
+alias gm="git commit -m"
+
 # -- Other
 alias ls="exa"
 alias n="nnn"
+alias m="rm config.h && make && sudo make install"
