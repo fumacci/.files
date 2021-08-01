@@ -1,26 +1,35 @@
 filetype plugin on
 filetype indent on
 
+" -- Plugins
 call plug#begin('~/.vim/plugged')
-Plug 'lervag/vimtex'
-Plug 'sirver/ultisnips'
 Plug 'tomasr/molokai'
+Plug 'franbach/miramare'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
-
-let mapleader = ","
-
-nmap <leader>w :w!<cr>
-nmap <leader>q :wq!<cr>
 
 " -- Searching things
 set ignorecase
 set hlsearch
 
-" -- Color/Font --
+" -- Syntax, Appearance and Encoding --
 syntax enable
 set encoding=utf8
-colorscheme molokai
-" let g:molokai_original = 0
+
+" -- Hybrid Number Mode
+set number
+set relativenumber
+
+" --- Colorscheme
+set termguicolors
+set background=dark
+
+let g:miramare_enable_italic = 1
+let g:miramare_disable_italic_comment = 1
+
+colorscheme miramare
+let g:airline_theme = 'miramare'
 
 " -- Backups --
 set nobackup
@@ -33,21 +42,10 @@ set shiftwidth=4
 set tabstop=4
 set si
 
-" -- vimtex relatable
-let g:tex_flavor='latex'
-let g:vimtex_view_method='zathura'
-let g:vimtex_quickfix_mode=0
-set conceallevel=1
-let g:tex_conceal='abdmg'
-let g:vimtex_compiler_latexmk = { 
-            \ 'executable' : 'latexmk',
-            \ 'options' : [ 
-                \   '-xelatex',
-                \   '-file-line-error',
-                \   '-synctex=1',
-                \   '-interaction=nonstopmode',
-                \ ],
-                \}
-
-" -- snips relatable
-let g:UltiSnipsExpandTrigger = '<tab>'
+" -- Keybinds
+let mapleader = ","
+cnoremap <C-A>		<Home>
+cnoremap <C-E>		<End>
+nmap <leader>w :w!<cr>
+nmap <leader>q :wq!<cr>
+map <space> /
