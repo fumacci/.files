@@ -1,99 +1,121 @@
-# -- custom keybinds general
+#
+# wm independent hotkeys
+#
 
-# --- terminal
+# terminal emulator
 super + Return
-	st
+	urxvt
 
-# --- dmenu
-super + d
+# program launcher
+super + @space
 	dmenu_run
 
-# -- reloading shxkd daemon
-super + l
+# make sxhkd reload its configuration files:
+super + Escape
 	pkill -USR1 -x sxhkd
 
-# --- keyboard layout changing
-super + shift + u
-    setxkbmap us
+#
+# bspwm hotkeys
+#
 
-super + shift + b
-    setxkbmap br
-
-# --- print using maim and copying the image to the xclip
-super + p
-    maim -s | xclip -selection clipboard -t image/png
-
-# -- fullscreen print
-super + shift + p
-    maim ~/img/$(date +%s).png
-
-# --- text editor
-super + e
-    emacs
- 
-# --- browser
-super + b
-    librewolf
-    
-# -- bspwm related keybinds
-
-# -- quit or restart bspwm
+# quit/restart bspwm
 super + shift + {e,r}
 	bspc {quit,wm -r}
 
-# -- close program on focus
+# clos/ and kill
 super + {_,shift + }q
 	bspc node -{c,k}
 
-# -- toggling through bspwm modes
+# alternate between the tiled and monocle layout
 super + m
 	bspc desktop -l next
 
-# -- fullscreen mode
+# send the newest marked node to the newest preselected node
+super + y
+	bspc node newest.marked.local -n newest.!automatic.local
+
+# swap the current node and the biggest window
 super + g
 	bspc node -s biggest.window
 
-# -- modes
+super + b
+	firefox
+
+super + p 
+	urxvt -e ranger ~/docs
+
+alt + p
+    maim -s ~/sc/$(date +%d-%b::%H:%M:%S).png
+
+super + d
+    dmenu_run
+
+alt + c
+    mpc toggle
+
+ctrl + less
+    mpc prev
+
+ctrl + greater
+    mpc next
+
+alt + shift + c
+	urxvt -e ncmpcpp
+    
+
+#
+# state/flags
+#
+
+# set the window state
 super + {t,shift + t,s,f}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
-# -- flag modes
+# set the node flags
 super + ctrl + {m,x,y,z}
 	bspc node -g {marked,locked,sticky,private}
 
-# -- focus
+#
+# focus/swap
+#
 
-# -- focus the node in the given direction
+# focus the node in the given direction
 super + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
 
-# -- focus the node for the given path jump
+# focus the node for the given path jump
 super + {p,b,comma,period}
 	bspc node -f @{parent,brother,first,second}
 
-# -- focus the next/previous window in the current desktop
+# focus the next/previous window in the current desktop
 super + {_,shift + }c
 	bspc node -f {next,prev}.local.!hidden.window
 
-# -- focus the next/previous desktop in the current monitor
+# focus the next/previous desktop in the current monitor
 super + bracket{left,right}
 	bspc desktop -f {prev,next}.local
 
-# -- focus the last node/desktop
+# focus the last node/desktop
 super + {grave,Tab}
 	bspc {node,desktop} -f last
 
-# -- focus the older or newer node in the focus history
+# focus the older or newer node in the focus history
 super + {o,i}
 	bspc wm -h off; \
 	bspc node {older,newer} -f; \
 	bspc wm -h on
 
-# -- focus or send to the given desktop
+# focus or send to the given desktop
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
 
-# -- preselect
+# focus to the given desktop
+super + {1-9}
+	bspc desktop -f '^{1-9,9}'
+
+#
+# preselect
+#
 
 # preselect the direction
 super + ctrl + {h,j,k,l}
@@ -111,7 +133,9 @@ super + ctrl + space
 super + ctrl + shift + space
 	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
-# -- move/resize
+#
+# move/resize
+#
 
 # expand a window by moving one of its side outward
 super + alt + {h,j,k,l}
@@ -124,3 +148,4 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+
